@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #050816, #0a0f2c, #111827);
+    overflow: hidden;
+}
+
+/* Fundo neon */
+body::before {
+    content: "";
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: rgba(0, 255, 255, 0.15);
+    filter: blur(120px);
+    border-radius: 50%;
+    top: -200px;
+    left: -150px;
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: rgba(140, 0, 255, 0.15);
+    filter: blur(120px);
+    border-radius: 50%;
+    bottom: -200px;
+    right: -150px;
+}
+
+.container {
+    position: relative;
+    width: 420px;
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow:
+        0 0 20px rgba(0,255,255,0.2),
+        0 0 40px rgba(140,0,255,0.2);
+    z-index: 1;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #00ffff;
+    font-size: 28px;
+    text-shadow: 0 0 10px #00ffff;
+}
+
+label {
+    display: block;
+    margin-top: 12px;
+    color: #fff;
+    font-size: 14px;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 10px;
+    background: rgba(255,255,255,0.08);
+    color: #fff;
+    outline: none;
+    transition: 0.3s;
+}
+
+input::placeholder {
+    color: #bbb;
+}
+
+input:focus {
+    border-color: #00ffff;
+    box-shadow: 0 0 15px #00ffff;
+    background: rgba(255,255,255,0.12);
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    color: white;
+}
+
+.checkbox input {
+    margin-right: 8px;
+    accent-color: #00ffff;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background: linear-gradient(90deg, #00ffff, #8c00ff);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0 0 15px rgba(0,255,255,0.5);
+}
+
+button:hover {
+    transform: scale(1.03);
+    box-shadow:
+        0 0 20px #00ffff,
+        0 0 40px #8c00ff;
+}
+
+/* Mensagens */
+#message {
+    display: none;
+    padding: 12px;
+    margin-top: 15px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.success {
+    background: rgba(0,255,120,0.15);
+    color: #00ff88;
+    border: 1px solid #00ff88;
+    box-shadow: 0 0 10px rgba(0,255,120,0.5);
+}
+
+.error {
+    background: rgba(255,0,80,0.15);
+    color: #ff4d6d;
+    border: 1px solid #ff4d6d;
+    box-shadow: 0 0 10px rgba(255,0,80,0.5);
+}
+
+#resposta {
+    padding: 12px;
+    border-radius: 10px;
+    margin-top: 15px;
+    color: #fff;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Inputs com ícones */
+.input-icon {
+    position: relative;
+    margin-bottom: 18px;
+}
+
+.input-icon i {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #00ffff;
+    font-size: 15px;
+    text-shadow: 0 0 8px #00ffff;
+}
+
+.input-icon input {
+    padding-left: 40px;
+    height: 42px;
+    width: 100%;
+}
